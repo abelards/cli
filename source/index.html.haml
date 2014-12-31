@@ -1,1 +1,54 @@
-<h1>It's working !</h1>
+%section.setup
+  .container
+    .row
+      %h1.title Command line utility for Scalingo PaaS
+
+      .install
+        %span.cli-logo
+          %i.fa.fa-terminal
+        %span.cmd
+          %code $
+          %code curl github.com/Scalingo/cli/tree/install.sh
+
+%section.features
+  .container
+    .row
+      %h1.title Features
+
+      %p
+        The command is now available on your system.
+
+      %pre
+        %code
+          scalingo -a &lt;app&gt; &lt;command&gt; [--command-flags] &lt;arg1&gt; &lt;arg2&gt; … &lt;argn&gt;
+
+      %ul.features
+        %li
+          %span.arrow →
+          Setup your account SSH keys
+        %li
+          %span.arrow →
+          Create new apps
+        %li
+          %span.arrow →
+          Configure their environment
+        %li
+          %span.arrow →
+          Configure custom domain names
+        %li
+          %span.arrow →
+          Provision addons
+        %li
+          %span.arrow →
+          Deploy
+        %li
+          %span.arrow →
+          Watch the logs
+        %li
+          %span.arrow →
+          Access the database
+        %li
+          %span.arrow →
+          Scale
+
+

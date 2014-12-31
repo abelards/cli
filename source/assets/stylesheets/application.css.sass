@@ -1,0 +1,83 @@
+@import "font-awesome"
+@import "bootstrap"
+
+$font-family-sans-serif:    "Helvetica Neue", Helvetica, Arial, sans-serif
+$light-black: lighten(#282828, 10%)
+$text-color: $light-black
+$dark-red: #9e3833
+$dark-blue: #215f8b
+$brand-primary: $dark-blue
+
+@import "logo"
+
+body
+  font-family: $font-family-sans-serif
+  color: $text-color
+
+code 
+  font-family: "Inconsolata", monospace
+  color: black
+
+pre code
+  font-size: 20px
+
+.navbar.nav
+  font-family: 'lato', sans-serif
+  a
+    &:hover, &:focus
+      text-decoration: none
+  .links
+    margin-top: 6px
+    margin-bottom: 0
+    a
+      font-size: 18px
+      font-weight: 900
+      line-height: 2
+      color: $light-black
+      &:hover, &:focus, &.active
+        color: $dark-blue
+  .logo
+    font-size: 36px
+    margin-top: 4px
+    margin-bottom: 0px
+    display: block
+    .go
+      margin-left: -8px
+
+h1.title
+  text-align: center
+  padding-top: 10px
+
+section
+  margin-top: 30px
+  margin-bottom: 30px
+
+section.setup
+  .install
+    margin-top: 50px
+    background-color: #f8f8f8
+    font-size: 36px
+    height: 65px
+    span.cli-logo
+      float: left
+      padding: 5px 10px 10px 10px
+      display: inline-block
+      background-color: #e1e1e1
+    span.cmd code
+      padding-left: 20px
+      float: left
+      padding-top: 8px
+      background-color: inherit
+
+section.features
+  color: white
+  background-color: $light-black
+  font-size: 24px
+  padding-bottom: 40px
+  p
+    margin-top: 20px
+  ul.features
+    margin-top: 30px
+    list-style: none
+    li span.arrow
+      padding-right: 5px
