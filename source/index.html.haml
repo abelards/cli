@@ -51,4 +51,38 @@
           %span.arrow →
           Scale
 
+%section.usage
+  .container
+    .row
+      %h1.title Usage
+
+      %h3 Login
+      
+      %p Any command will ask your to login before being executed.
+
+      %pre
+        %code
+          $ scalingo &lt;any command&gt;
+          You need to be authenticated to use Scalingo client.
+          No account ? → https://my.scalingo.com/users/signup
+          Username or email: myusername
+          Password: #FILTERED#
+          \...
+          Hello Soulou, nice to see you!
+
+      %h3 List apps
+        
+      %pre
+        %code
+          $ scalingo apps
+          +-------------+--------------+--------------------------------+
+          |    NAME     |     ROLE     |             OWNER              &#124;
+          +-------------+--------------+--------------------------------+
+          | myapp1      | owner        | -                              &#124;
+          | otherapp1   | collaborator | otheruser &lt;user@example.com&gt;   &#124;
+          +-------------+--------------+--------------------------------+
+
+
+
+        
 
