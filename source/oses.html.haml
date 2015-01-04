@@ -1,0 +1,54 @@
+%section.oses
+  .container
+    .row
+      %h1 Supported operating systems
+
+      %p We officialy support the following operating systems:
+
+      %ul.oses-list
+        %li
+          %i.fa.fa-linux
+          \-
+          Linux
+        %li
+          %i.fa.fa-apple
+          \-
+          MacOS
+        %li
+          %i.fa.fa-windows
+          \-
+          Windows
+        %li
+          %img{src: "/assets/images/freebsd.png"}
+          \-
+          FreeBSD
+        %li
+          %img{src: "/assets/images/openbsd.png"}
+          \-
+          OpenBSD
+
+      %h1 Binaries
+
+      %h3 Access
+
+      %p
+        For each of these operating systems, you can find the precompiled binaries at the following URL:
+      
+      %p
+        →
+        %a{href: 'https://github.com/Scalingo/cli/releases'}https://github.com/Scalingo/cli/releases
+
+      %h3 Dependencies
+
+      %p
+        As the Scalingo client is developped with Go, the binaries are self sufficient, you have no
+        external dependency to install.
+
+      %h3 Tips
+
+      %ul
+        %li
+          If you have Linux or Mac OS, install it with
+          %a{href: "/"}the install script
+        %li For an easier access, move the file to a directory included in your PATH
+

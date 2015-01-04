@@ -4,12 +4,20 @@
       %h1.title Command line utility for Scalingo PaaS
 
       .install
-        %span.cli-logo
-          %i.fa.fa-terminal
-        %span.cmd
-          %code $
-          %code curl -O cli-dl.scalingo.io/install &amp;&amp; bash install
-
+        .install-cli
+          %span.cli-logo
+            %i.fa.fa-terminal
+          %span.cmd
+            %code $
+            %code
+              curl -O&nbsp;
+              %a{href: "http://cli-dl.scalingo.io"}>='cli-dl.scalingo.io<i class="fa fa-external-link"></i>'
+              \/install &amp;&amp; bash install
+          %span.oses
+            %i.fa.fa-linux
+            %i.fa.fa-apple
+        %span.others
+          %a{title: "Other OSes", href: "/oses"}…
 %section.features
   .container
     .row

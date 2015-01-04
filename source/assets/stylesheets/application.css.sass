@@ -52,22 +52,49 @@ section
   margin-top: 30px
   margin-bottom: 30px
 
+section.oses
+  font-size: 20px
+  ul.oses-list
+    list-style: none
+    font-size: 26px
+
 section.setup
   .install
-    margin-top: 50px
-    background-color: #f8f8f8
     font-size: 36px
-    height: 65px
-    span.cli-logo
-      float: left
-      padding: 5px 10px 10px 10px
+    .install-cli
       display: inline-block
-      background-color: #e1e1e1
-    span.cmd code
-      padding-left: 20px
-      float: left
-      padding-top: 8px
-      background-color: inherit
+      padding-right: 20px
+      margin-top: 50px
+      background-color: #f8f8f8
+      height: 65px
+      span.cli-logo
+        float: left
+        padding: 5px 10px 10px 10px
+        display: inline-block
+        background-color: #e1e1e1
+      span.cmd code
+        padding-left: 20px
+        float: left
+        padding-top: 8px
+        background-color: inherit
+        i.fa.fa-external-link
+          position: relative
+          bottom: 15px
+          font-size: 10px  
+      span.oses
+        padding-left: 30px
+        float: right
+        position: relative
+        top: 5px
+    span.others
+      position: relative
+      bottom: 20px
+      font-size: 60px
+      a
+        text-decoration: none
+        &:hover
+          color: lighten(#337ab7, 20%)
+          text-decoration: underline
 
 section.features
   color: white
