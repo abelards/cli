@@ -69,8 +69,9 @@ class UsageHelper < Middleman::Extension
 
     def subcmds(cmds)
       "<code>scalingo #{cmds.map{|c|
-        "<span data-toggle='tooltip' data-placement='right' title='#{c[:example]}' class='subcmd'>#{c[:name]}</span>" }.join("|")
-      }</code>"
+        "<span class='subcmd'>#{c[:name]}</span>" }.join("|")
+      }</code>" +
+      "<div class='examples'><pre><code>#{cmds.map{|c| c[:example] }.join("\n")}</code></pre></div>"
     end
   end
 end
