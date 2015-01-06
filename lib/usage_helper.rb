@@ -1,15 +1,15 @@
 class UsageHelper < Middleman::Extension
   CMDS = [
     {
+      desc: "Create new apps",
+      cmds: [{ name: "create",    example: "scalingo create my-new-app" }]
+    }, {
       desc: "Setup your account SSH keys",
       cmds: [
         { name: "keys",           example: "scalingo -a myapp keys" },
         { name: "keys-add",       example: "scalingo -a myapp keys-add \"Laptop SSH key\" $HOME/.ssh/id_rsa.pub" },
         { name: "keys-remove",    example: "scalingo -a myapp keys-remove \"Laptop SSH key\"" }
       ]
-    }, {
-      desc: "Create new apps",
-      cmds: [{ name: "create",    example: "scalingo create my-new-app" }]
     }, {
       desc: "Configure their environment",
       cmds: [
