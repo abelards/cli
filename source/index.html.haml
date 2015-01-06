@@ -33,7 +33,26 @@
 
       = usage
 
-%section.changelog
+%section.configuration
+  .container
+    .row
+      %h1.title Configuration
+        
+      %h2 Application Detection
+
+      %p We try to detect automatically the name of your application according to:
+      %ul
+        %li
+          %code SCALINGO_APP
+          environment variable
+        %li
+          %code -a|--app
+          flag of the command line
+        %li
+          %code scalingo
+          remote of your GIT repository
+
+%section.black.changelog
   .container
     .row
       %h1.title Changelog
@@ -82,23 +101,3 @@
           1.0.0-alpha1
           %ul
             %li First public draft
-        
-
-%section.black.configuration
-  .container
-    .row
-      %h1.title Configuration
-        
-      %h2 Application Detection
-
-      %p We try to detect automatically the name of your application according to:
-      %ul
-        %li
-          %code SCALINGO_APP
-          environment variable
-        %li
-          %code -a|--app
-          flag of the command line
-        %li
-          %code scalingo
-          remote of your GIT repository
