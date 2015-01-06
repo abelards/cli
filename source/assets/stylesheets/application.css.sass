@@ -94,24 +94,24 @@ section
             color: lighten(#337ab7, 20%)
             text-decoration: underline
   &.features
-    ul.usage
+    .usage
       margin-top: 30px
       list-style: none
-      li
-        span.description
-          display: inline-block
-          width: 500px
-          span.arrow
-            padding-right: 5px
-        code span.subcmd
+      span.description
+        span.arrow
+          padding-right: 5px
+      code
+        display: inline-block
+        width: 100%
+        margin-bottom: 5px
+        span.subcmd
           color: darken(red, 20%)
-        .examples
-          pre
-            margin-left: 500px
-            width: 70%
-            background-color: darken($light-black, 10%)
-            color: white
-            display: inline-block
+      .examples
+        pre
+          width: 100%
+          background-color: darken($light-black, 10%)
+          color: white
+          display: inline-block
   &.changelog
     ul.releases
       list-style: none

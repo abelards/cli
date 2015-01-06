@@ -61,17 +61,17 @@ class UsageHelper < Middleman::Extension
 
   helpers do
     def usage
-      "<ul class='usage'>" +
+      "<div class='usage'>" +
       CMDS.map do |c|
-        "<li><span class='description'><span class='arrow'>→</span>#{c[:desc]}</span>#{subcmds(c[:cmds])}</li>"
-      end.join("\n") + "</ul>"
+        "<div class='row'><div class='col-xs-4'><span class='description'><span class='arrow'>→</span>#{c[:desc]}</span></div>#{subcmds(c[:cmds])}</div>"
+      end.join("\n") + "</div>"
     end
 
     def subcmds(cmds)
-      "<code>scalingo #{cmds.map{|c|
+      "<div class='col-xs-8'><code>scalingo #{cmds.map{|c|
         "<span class='subcmd'>#{c[:name]}</span>" }.join("|")
       }</code>" +
-      "<div class='examples'><pre><code>#{cmds.map{|c| c[:example] }.join("\n")}</code></pre></div>"
+      "<div class='examples'><pre><code>#{cmds.map{|c| c[:example] }.join("\n")}</code></pre></div></div>"
     end
   end
 end
