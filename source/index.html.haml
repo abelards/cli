@@ -57,47 +57,46 @@
     .row
       %h1.title Changelog
 
-      %ul.releases
-        %li.release
-          1.0.0-alpha3
-          %ul
-            %li
-              Fix credential storage issue
-              %pre
-                %code
-                  fixed: #72 #73
-            %li
-              Fix wrong help for command 'db-tunnel'
-              %pre
-                %code
-                  fixed: #74
-            %li
-              Fix logfile open operation on MacOS
-              %pre
-                %code
-                  fixed: #70
-            %li
-              Build Windows version on Windows with CGO
-              %pre
-                %code
-                  fixed: #71
-            %li
-              Build Mac OS verison on Mac OS with CGO
-              %pre
-                %code
-                  fixed: #71
-        %li.release
-          1.0.0-alpha2
-          %ul
-            %li
-              Move addons-related commands to toplevel
-              %pre
-                %code
-                  :preserve
-                    new-command: addons-add &lt;addon&gt; &lt;plan&gt;
-                    new-command: addons-remove &lt;addon-id&gt;
-                    new-command: addons-upgrade &lt;addon-id&gt; &lt;plan&gt;
-        %li.release
-          1.0.0-alpha1
-          %ul
-            %li First public draft
+      .col-xs-offset-1.cold-xs-offset-9.release
+        %h2 1.0.0-alpha3
+        %ul
+          %li
+            Fix credential storage issue
+            %pre
+              %code
+                fixed: #72 #73
+          %li
+            Fix wrong help for command 'db-tunnel'
+            %pre
+              %code
+                fixed: #74
+          %li
+            Fix logfile open operation on MacOS
+            %pre
+              %code
+                fixed: #70
+          %li
+            Build Windows version on Windows with CGO
+            %pre
+              %code
+                fixed: #71
+          %li
+            Build Mac OS verison on Mac OS with CGO
+            %pre
+              %code
+                fixed: #71
+      .col-xs-offset-1.cold-xs-offset-9.release
+        %h2 1.0.0-alpha2
+        %ul
+          %li
+            Move addons-related commands to toplevel
+            %pre
+              %code
+                :preserve
+                  new-command: addons-add &lt;addon&gt; &lt;plan&gt;
+                  new-command: addons-remove &lt;addon-id&gt;
+                  new-command: addons-upgrade &lt;addon-id&gt; &lt;plan&gt;
+      .col-xs-offset-1.cold-xs-offset-9.release
+        %h2 1.0.0-alpha1
+        %ul
+          %li First public draft

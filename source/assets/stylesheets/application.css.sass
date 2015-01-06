@@ -113,29 +113,27 @@ section
           color: white
           display: inline-block
   &.changelog
-    ul.releases
-      list-style: none
-      li.release
+    .release
+      display: block
+      color: white
+      background-color: lighten($light-black, 5%)
+      border-radius: 6px
+      border: 1px solid  black
+      text-align: center
+      margin-top: 20px
+      margin-bottom: 10px
+      padding-top: 20px
+      padding-bottom: 20px
+      ul
+        text-align: left
         display: block
-        color: white
-        background-color: lighten($light-black, 5%)
-        border-radius: 6px
-        border: 1px solid  black
-        text-align: center
-        margin-top: 20px
-        margin-bottom: 10px
-        padding-top: 20px
-        padding-bottom: 20px
-        ul
-          text-align: left
-          display: block
-          li 
-            padding: 5px
-            pre
-              margin-top: 10px
-              margin-right: 40px
-              color: white
-              background-color: lighten($light-black, 10%)
+        li 
+          padding: 5px
+          pre
+            margin-top: 10px
+            margin-right: 40px
+            color: white
+            background-color: lighten($light-black, 10%)
   &.oses
     h3
       font-size: 28px
