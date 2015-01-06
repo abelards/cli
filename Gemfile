@@ -12,3 +12,4 @@ gem 'coffee-script'
 
 gem 'font-awesome-middleman'
 gem 'bootstrap-sass', require: false
+gem "jquery-middleman"

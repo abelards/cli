@@ -1,3 +1,5 @@
+require "./lib/usage_helper.rb"
+
 Time.zone = "Europe/Paris"
 
 # Reload the browser automatically whenever files change
@@ -23,6 +25,7 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir,  'assets/fonts'
 
+activate :usage_helper
 activate :syntax
 set :haml, { :ugly => true, :format => :html5 }
 set :markdown_engine, :redcarpet
