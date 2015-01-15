@@ -56,6 +56,26 @@
   .container
     .row
       %h1.title Changelog
+      .col-xs-offset-1.cold-xs-offset-9.release
+        %h2 1.0.0-alpha4
+        %ul
+          %li
+            Adapt to Scalingo API modifications
+          %li
+            Do not encode HTML entities anymore
+            %pre
+              %code
+                command: logs
+          %li
+            New login command
+            %pre
+              %code
+                command: login
+          %li
+            Allow to use encrypted SSH key (AES-128-CBC)
+            %pre
+              %code
+                command: db-tunnel
 
       .col-xs-offset-1.cold-xs-offset-9.release
         %h2 1.0.0-alpha3
