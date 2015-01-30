@@ -43,6 +43,9 @@ class UsageHelper < Middleman::Extension
       desc: "Watch the logs",
       cmds: [{ name: "logs",      example: "scalingo -a myapp logs -f" }]
     }, {
+      desc: "Run custom job",
+      cmds: [{ name: "run", example: "scalingo -a myapp run bundle exec rails console" }]
+    }, {
       desc: "Access your database",
       cmds: [{ name: "db-tunnel", example: "scalingo -a myapp db-tunnel SCALINGO_MONGODB_URL" }]
     }, {
