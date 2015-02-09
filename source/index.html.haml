@@ -1,67 +1,112 @@
 %section.setup
   .container
     .row
-      %h1.title Command line utility for Scalingo PaaS
+      .col-xs-12
+        %h1.text-center Command line utility for Scalingo PaaS
+    .row
+      .col-xs-12
+        .form-group.install
+          .input-group
+            .input-group-addon.cli-logo
+              %i.fa.fa-terminal
+            %input.form-control{type: "text", disabled: "disabled", value: "curl -O https://cli-dl.scalingo.io/install && bash install"}
 
-      .install
-        .install-cli
-          %span.cli-logo
-            %i.fa.fa-terminal
-          %span.cmd
-            %code $
-            %code
-              curl -O&nbsp;
-              %a{href: "https://cli-dl.scalingo.io"}>='https://cli-dl.scalingo.io<i class="fa fa-external-link"></i>'
-              \/install &amp;&amp; bash install
-          %span.oses
+%section.oses
+  .container
+    .row
+      .col-xs-12
+        %h2.no-top Supported operating systems
+
+        %p We officialy support the following operating systems:
+
+        %ul.list-inline
+          %li
             %i.fa.fa-linux
+            Linux
+          %li
             %i.fa.fa-apple
-        %span.others
-          %a{title: "Other OSes", href: "/oses"}…
+            MacOS
+          %li
+            %i.fa.fa-windows
+            Windows
+          %li
+            %img{src: "/assets/images/freebsd.png"}
+            FreeBSD
+          %li
+            %img{src: "/assets/images/openbsd.png"}
+            OpenBSD
+
+        %h2 Binaries
+
+        %h3 Access
+
+        %p
+          For each of these operating systems, you can find the precompiled binaries at the following URL:
+
+        %p
+          →
+          %a{href: 'https://github.com/Scalingo/cli/releases'}https://github.com/Scalingo/cli/releases
+
+        %h3 Dependencies
+
+        %p
+          As the Scalingo client is developped with Go, the binaries are self sufficient, you have no
+          external dependency to install.
+
+        %h3 Tips
+
+        %ul
+          %li
+            If you have Linux or Mac OS, install it with
+            %a{href: "/"}the install script
+          %li For an easier access, move the file to a directory included in your PATH
 
 %section.black.features
   .container
     .row
-      %h1.title Features
+      .col-xs-12
+        %h1.title Features
 
-      %p
-        The command is now available on your system.
+        %p
+          The command is now available on your system.
 
-      %pre
-        %code
-          scalingo -a &lt;app&gt; &lt;command&gt; [--command-flags] &lt;arg1&gt; &lt;arg2&gt; … &lt;argn&gt;
+        %pre
+          %code
+            scalingo -a &lt;app&gt; &lt;command&gt; [--command-flags] &lt;arg1&gt; &lt;arg2&gt; … &lt;argn&gt;
 
-      = usage
+        = usage
 
 %section.configuration
   .container
     .row
-      %h1.title
-        %a{href: "#Configuration", name: "Configuration"}
-        Configuration
-        
-      %h2 Application Detection
+      .col-xs-12
+        %h1.title
+          %a{href: "#Configuration", name: "Configuration"}
+          Configuration
 
-      %p We try to detect automatically the name of your application according to:
-      %ul
-        %li
-          %code SCALINGO_APP
-          environment variable
-        %li
-          %code -a|--app
-          flag of the command line
-        %li
-          %code scalingo
-          remote of your GIT repository
+        %h2 Application Detection
+
+        %p We try to detect automatically the name of your application according to:
+        %ul
+          %li
+            %code SCALINGO_APP
+            environment variable
+          %li
+            %code -a|--app
+            flag of the command line
+          %li
+            %code scalingo
+            remote of your GIT repository
 
 %section.black.changelog
   .container
     .row
-      %h1.title
-        Changelog
-        %a{href: "#Changelog", name: "Changelog"}
-      .col-xs-offset-1.cold-xs-offset-9.release
-        %h2 1.0.0-alpha4
+      .col-xs-12
+        %h1
+          Changelog
+          %a{href: "#Changelog", name: "Changelog"}
+      .col-xs-12
+        %strong 1.0.0-alpha4
         %ul
           %li
             Adapt to Scalingo API modifications
@@ -81,8 +126,8 @@
               %code
                 command: db-tunnel
 
-      .col-xs-offset-1.cold-xs-offset-9.release
-        %h2 1.0.0-alpha3
+      .col-xs-12
+        %strong 1.0.0-alpha3
         %ul
           %li
             Fix credential storage issue
@@ -109,8 +154,8 @@
             %pre
               %code
                 fixed: #71
-      .col-xs-offset-1.cold-xs-offset-9.release
-        %h2 1.0.0-alpha2
+      .col-xs-12
+        %strong 1.0.0-alpha2
         %ul
           %li
             Move addons-related commands to toplevel
@@ -120,7 +165,7 @@
                   new-command: addons-add &lt;addon&gt; &lt;plan&gt;
                   new-command: addons-remove &lt;addon-id&gt;
                   new-command: addons-upgrade &lt;addon-id&gt; &lt;plan&gt;
-      .col-xs-offset-1.cold-xs-offset-9.release
-        %h2 1.0.0-alpha1
+      .col-xs-12
+        %strong 1.0.0-alpha1
         %ul
           %li First public draft

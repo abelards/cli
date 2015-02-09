@@ -29,18 +29,11 @@
         .row
           .col-xs-12
             .pull-left
-              .logo
-                %a{href: "/"}
-                  %span.notgo.text-black Scalin
-                  %span.go go
+              %a{href: "/", class: "h1"}
+                = image_tag "https://scalingo.com/logo-lightgrey.svg", style: "height:35px;", alt: "Scalingo logo"
             .pull-right
               %ul.list-inline.links.onboard
                 %li
                   = link_to "Homepage", "https://scalingo.com"
-                %li
-                  = link_to "Sign up", "https://scalingo-dashboard-production.appsdeck.eu/users/signup"
-                %li
-                  = link_to "Sign in", "https://scalingo-dashboard-production.appsdeck.eu/sessions"
-
     = yield
 

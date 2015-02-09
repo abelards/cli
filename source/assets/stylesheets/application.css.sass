@@ -9,14 +9,12 @@ $dark-red: #9e3833
 $dark-blue: #215f8b
 $brand-primary: $dark-blue
 
-@import "logo"
-
 body
   font-family: $font-family-sans-serif
   font-size: 24px
   color: $text-color
 
-code 
+code
   font-family: "Inconsolata", monospace
   color: black
 
@@ -46,39 +44,33 @@ pre code
     .go
       margin-left: -8px
 
-h1.title
-  text-align: center
-  padding-top: 10px
+.no-top
+  margin-top: 0
 
 section
-  padding-bottom: 30px
-  margin-top: 20px
+  padding-top: 40px
+  padding-bottom: 40px
+  h1
+    margin-top: 0
   &.black
     color: white
     background-color: $light-black
   &.setup
+    padding-bottom: 0
+    h1
+      margin-bottom: 60px
     .install
-      font-size: 36px
-      .install-cli
-        display: inline-block
-        padding-right: 20px
-        margin-top: 50px
-        background-color: #f8f8f8
-        height: 65px
-        span.cli-logo
-          float: left
-          padding: 5px 10px 10px 10px
-          display: inline-block
+      margin-bottom: 60px
+      .input-group
+        .form-control, .input-group-addon
+          font-size: 36px
+          height: 58px
+          font-family: "Inconsolata", monospace
+          color: black
+        .form-control
+          background-color: #f8f8f8
+        .input-group-addon
           background-color: #e1e1e1
-        span.cmd code
-          padding-left: 20px
-          float: left
-          padding-top: 8px
-          background-color: inherit
-          i.fa.fa-external-link
-            position: relative
-            bottom: 15px
-            font-size: 10px  
         span.oses
           padding-left: 30px
           float: right
@@ -127,7 +119,7 @@ section
       ul
         text-align: left
         display: block
-        li 
+        li
           padding: 5px
           pre
             margin-top: 10px
@@ -135,8 +127,4 @@ section
             color: white
             background-color: lighten($light-black, 10%)
   &.oses
-    h3
-      font-size: 28px
-      font-weight: bold
-    ul.oses-list
-      list-style: none
+    padding-top: 0
