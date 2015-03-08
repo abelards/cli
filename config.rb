@@ -46,3 +46,14 @@ activate :deploy do |deploy|
   deploy.build_before = true # default: false
   deploy.method = :git
 end
+
+after_build do |builder|
+  Dir["#{config[:build_dir]}/**/*.html"].each do |file|
+    content = File.read file
+    matches = content.scan /#\d+/
+    matches.each do |match|
+      content.gsub! match, "<a href=\"https://github.com/Scalingo/cli/issues/#{match[1..-1]}\">#{match}</a>"
+    end
+    File.write file, content
+  end
+end
