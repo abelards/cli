@@ -110,61 +110,26 @@
         %strong 1.0.0-alpha4
         %ul
           %li Adapt to Scalingo API modifications
-          %li
-            Do not encode HTML entities anymore
-            %pre
-              %code
-                command: logs
-          %li
-            New login command
-            %pre
-              %code
-                command: login
-          %li
-            Allow to use encrypted SSH key (AES-128-CBC)
-            %pre
-              %code
-                command: db-tunnel
-
+          %li Do not encode HTML entities anymore - command: logs
+          %li New login command - command: login
+          %li Allow to use encrypted SSH key (AES-128-CBC) - command: db-tunnel
       .col-xs-12
         %strong 1.0.0-alpha3
         %ul
-          %li
-            Fix credential storage issue
-            %pre
-              %code
-                fixed: #72 #73
-          %li
-            Fix wrong help for command 'db-tunnel'
-            %pre
-              %code
-                fixed: #74
-          %li
-            Fix logfile open operation on MacOS
-            %pre
-              %code
-                fixed: #70
-          %li
-            Build Windows version on Windows with CGO
-            %pre
-              %code
-                fixed: #71
-          %li
-            Build Mac OS verison on Mac OS with CGO
-            %pre
-              %code
-                fixed: #71
+          %li Fix credential storage issue - fixed #72, #73
+          %li Fix wrong help for command 'db-tunnel' - fixed #74
+          %li Fix logfile open operation on MacOS - fixed #70
+          %li Build Windows version on Windows with CGO - fixed #71
+          %li Build Mac OS verison on Mac OS with CGO - fixed #71
       .col-xs-12
         %strong 1.0.0-alpha2
         %ul
           %li
             Move addons-related commands to toplevel
-            %pre
-              %code
-                :preserve
-                  new-command: addons-add &lt;addon&gt; &lt;plan&gt;
-                  new-command: addons-remove &lt;addon-id&gt;
-                  new-command: addons-upgrade &lt;addon-id&gt; &lt;plan&gt;
+            %ul
+              %li new-command: addons-add &lt;addon&gt; &lt;plan&gt;
+              %li new-command: addons-remove &lt;addon-id&gt;
+              %li new-command: addons-upgrade &lt;addon-id&gt; &lt;plan&gt;
       .col-xs-12
         %strong 1.0.0-alpha1
         %ul
