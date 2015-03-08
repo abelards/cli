@@ -87,10 +87,29 @@
           Changelog
           %a{href: "#Changelog", name: "Changelog"}
       .col-xs-12
+        %strong 1.0.0-beta1
+        %ul
+          %li Windows, password: don't display password in clear
+          %li Windows, db-tunnel: Correctly handle SSH key path with -i flag
+          %li Send OS to one-off containers (for prompt handling, useful for Windows)
+          %li Fix EOF error when writing the password
+          %li Fix authentication request to adapt the API
+          %li Correctly handle 402 errors (payment method required) #90
+          %li Project is go gettable `go get github.com/Scalingo/cli`
+          %li Fix GIT remote detection #89
+          %li Correctly handle 404 Error, display clearer messages #91
+          %li More documentation for the `run` command - Fixed #79
+          %li Rewrite API client package, remove unsafe code - Fixed #80
+          %li Allow environment variable name or value for `db-tunnel` as argument
+          %li Extended help for `db-tunnel` - Fixed #85
+          %li Ctrl^C doesn't kill an `run` command anymore - Fixed #83
+          %li --app flag can be written everywhere in the command line - Fixed #10
+          %li Use SSH agent if possible to get SSH credentials
+          %li Correcty handle encrypted SSH keys (AES-CBC and DES-ECE2) - Fixed #76, #77
+      .col-xs-12
         %strong 1.0.0-alpha4
         %ul
-          %li
-            Adapt to Scalingo API modifications
+          %li Adapt to Scalingo API modifications
           %li
             Do not encode HTML entities anymore
             %pre
