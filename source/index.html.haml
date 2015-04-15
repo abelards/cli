@@ -87,6 +87,14 @@
           Changelog
           %a{href: "#Changelog", name: "Changelog"}
       .col-xs-12
+        %strong 1.0.0-rc1
+        %ul
+          %li [Feature] Modify size of containers with `scalingo scale` - #102
+          %li [Bugfix] Fix ssh-agent error when no private key is available - Fixed #100
+          %li [Bugfix] Fix domain-add issue. (error about domain.crt file) - Fixed #98
+          %li [Bugfix] Fix addon plans description, no more HTML in them  - #96
+          %li [Bugfix] Correctly handle db-tunnel when alias is given as argument - Fixed #93
+      .col-xs-12
         %strong 1.0.0-beta1
         %ul
           %li Windows, password: don't display password in clear
